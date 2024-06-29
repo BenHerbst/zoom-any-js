@@ -1,0 +1,10 @@
+.zoomAnyJs-zoomElement {
+    position: relative;
+    transform-origin: top left;
+}
+
+.wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
