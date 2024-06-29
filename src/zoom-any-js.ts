@@ -3,6 +3,8 @@ interface IPosition {
     y: number
 }
 
+import "./zoom-any-js.css"
+
 export default class ZoomAnyJs {
     // @ts-ignore
     #element: HTMLElement;

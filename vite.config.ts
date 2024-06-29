@@ -13,7 +13,7 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/zoom-any-js.ts'),
             name: 'zoom-any-js',
             // the proper extensions will be added
-            fileName: 'my-lib',
+            fileName: 'zoom-any-js',
         },
         rollupOptions: {
             // make sure to externalize deps that shouldn't be bundled
@@ -23,6 +23,11 @@ export default defineConfig({
                 // Provide global variables to use in the UMD build
                 // for externalized deps
                 globals: {},
+                assetFileNames: (assetInfo) => {
+                    if(assetInfo.name == 'style.css')
+                        return 'zoom-any-js.css'
+                    return assetInfo.name
+                }
             },
         },
     },
