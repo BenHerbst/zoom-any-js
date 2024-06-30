@@ -1,7 +1,7 @@
 import ZoomAnyJs from "../src/zoom-any-js.ts";
 
 // const zoom = new ZoomAnyJs()
-const zoom2 = new ZoomAnyJs("#myButton")
+const zoom2 = new ZoomAnyJs()
 
 document.getElementById("myButton").addEventListener("click", () => {
     zoom2.center()

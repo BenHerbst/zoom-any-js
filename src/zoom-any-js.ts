@@ -19,6 +19,8 @@ export default class ZoomAnyJs {
         this.#selectElement(elementSelector)
         this.#onWheelListener = this.#onWheel.bind(this)
         this.addListeners()
+        this.fitToBounds()
+        this.apply()
     }
 
     #selectElement(elementSelector: string) {
