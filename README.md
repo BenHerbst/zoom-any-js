@@ -1,5 +1,6 @@
 <div align="center">
 <h1>ZoomAny.js</h1>
+<img src="ZoomAnyJs.svg">
 
 Zoom literally **ANY** HTML Element using pure vanilla JavaScript.
 
