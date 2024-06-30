@@ -40,7 +40,7 @@ Now try to zoom into your image, it should start to zoom! 🎉
 ## Examples
 
 Go to center on click:
-```
+``` ts
 document.getElementById("img").addEventListener("click", () => {
     zoom.center()
     zoom.apply()
@@ -48,13 +48,13 @@ document.getElementById("img").addEventListener("click", () => {
 ```
 
 Zoom into the screen center:
-```
+``` js
 zoom.zoomAt(1.1, { x: window.innerWidth / 2, y: window.innerHeight / 2 })
 zoom.apply()
 ```
 
 Using the wrapper class:
-```
+``` html
 <div class="wrapper">
   <button class="zoomable" data-max-zoom="2000" data-min-zoom="20" data-bounds style="background-color: red; color: white; width: 500px; height: 300px; font-size: 30px;">TEEEEEEST</button>
 </div>
@@ -63,13 +63,13 @@ Using the wrapper class:
 This keeps it inside the wrapper div and makes you zoom into it without any overflow.
 
 Whatsapp or Windows Photos like Image Zoom:
-```
+``` html
 <img class="zoomable" data-bounds src="test/img/1.png">
 ```
 
 Multiple images:
 Each gets their own instance, and you pass a css selector into the constructor like this:
-```
+``` js
 const zoom1 = new ZoomAnyJs()
 const zoom2 = new ZoomAnyJs(".zoom2")
 const zoom3 = new ZoomAnyJs("#zoom3")
