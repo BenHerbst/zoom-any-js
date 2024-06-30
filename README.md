@@ -60,12 +60,20 @@ Using the wrapper class:
 </div>
 ```
 
+![Wrapper Zoomed Out](3.png)
+
+![Wrapper Zoomed In](4.png)
+
 This keeps it inside the wrapper div and makes you zoom into it without any overflow.
 
 Whatsapp or Windows Photos like Image Zoom:
 ``` html
 <img class="zoomable" data-bounds src="test/img/1.png">
 ```
+
+![Bounded Zoomed Out](1.png)
+
+![Bounded Zoomed In](2.png)
 
 Multiple images:
 Each gets their own instance, and you pass a css selector into the constructor like this:
