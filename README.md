@@ -48,7 +48,7 @@ const zoom = new ZoomAnyJs()
 <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.css">
 ```
 
-``` js
+``` html
 <script type="module">
     import ZoomAnyJs from "https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.js"
 
