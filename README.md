@@ -1,4 +1,3 @@
-<img width="657" alt="image" src="https://github.com/BenHerbst/zoom-any-js/assets/83538916/75f1f1f0-1a73-44f7-8d28-08e25be70811"><div align="center">
 <h1>ZoomAny.js</h1>
 <img src="ZoomAnyJs.svg" width="500">
 
