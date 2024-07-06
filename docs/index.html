@@ -27,7 +27,7 @@
                     <a href="/#docs">Docs</a>
                 </li>
                 <li>
-                    <a href="/#docs">Examples</a>
+                    <a href="/#examples">Examples</a>
                 </li>
             </ul>
         </nav>
@@ -53,7 +53,7 @@
         </div>
     </section>
     <section>
-        <h2>Get Started</h2>
+        <h2 id="get-started">Get Started</h2>
         <hr>
         <h3>Install</h3>
         <p>Install via NPM:</p>
@@ -79,11 +79,138 @@ const zoom = new ZoomAnyJs()</code></pre>
         <p>Now try to zoom into your image, it should start to zoom!</p>
     </section>
     <section>
-        <h2>Docs</h2>
+        <h2 id="docs">Docs</h2>
         <hr>
+        <h3>Methods:</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Parameters</th>
+                <th>Returns</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>constructor</td>
+                <td>Selects the DOM element to be manipulated using the provided selector. Adds event listeners and
+                    applies zoom.
+                </td>
+                <td>string (default=".zoomable")</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>reset</td>
+                <td>Resets the internal values of the zoom element to their default state.</td>
+                <td>None</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>getZoom</td>
+                <td>Retrieves the current zoom level of the element.</td>
+                <td>None</td>
+                <td>number</td>
+            </tr>
+            <tr>
+                <td>setZoom</td>
+                <td>Sets the current zoom level of the element.</td>
+                <td>number</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>setPos</td>
+                <td>Sets the position values (x and y coordinates) for the element.</td>
+                <td>object {x: number, y: number}</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>getPos</td>
+                <td>Retrieves the current position values (x and y coordinates) of the element.</td>
+                <td>None</td>
+                <td>object {x: number, y: number}</td>
+            </tr>
+            <tr>
+                <td>center</td>
+                <td>Centers the element within its container, which can be the window or the element's parent.</td>
+                <td>None</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>fitToBounds</td>
+                <td>Adjusts the position of the element to fit within its bounds based on the data-origin and
+                    data-bounds attributes.
+                </td>
+                <td>None</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>zoomAt</td>
+                <td>Zooms the element based on the given amplitude and position.</td>
+                <td>number, object {x: number, y: number}</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>addListeners</td>
+                <td>Adds event listeners to the element for handling user interactions.</td>
+                <td>None</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>removeListeners</td>
+                <td>Removes event listeners from the element to stop handling user interactions.</td>
+                <td>None</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>apply</td>
+                <td>Applies the current transformation and position values to the element.</td>
+                <td>None</td>
+                <td>void</td>
+            </tr>
+            <tr>
+                <td>destroy</td>
+                <td>Removes all listeners and CSS changes, reverting the element to its initial state.</td>
+                <td>None</td>
+                <td>void</td>
+            </tr>
+            </tbody>
+        </table>
+        <h3>Data-Options:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Function</th>
+                    <th>Default</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>data-max-zoom</td>
+                    <td>Set maximum zoom</td>
+                    <td>4000</td>
+                </tr>
+                <tr>
+                    <td>data-min-zoom</td>
+                    <td>Set minimum zoom</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>data-bounds</td>
+                    <td>Enable fit to bound</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>data-origin-parent</td>
+                    <td>Use the offsetParent as origin for fitting bounding. Else it uses window</td>
+                    <td>false</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
     <section>
-        <h2>Examples</h2>
+        <h2 id="examples">Examples</h2>
         <hr>
         <h3>Fullscreen</h3>
         <div>
@@ -120,6 +247,9 @@ const zoom = new ZoomAnyJs()</code></pre>
         </div>
     </section>
 </main>
+<footer class="container-fluid">
+    <p>Made by <a href="https://benherbst.net/" rel="author">Ben Herbst</a>. Licensed under Apache-2.0.</p>
+</footer>
 <script type="module">
     import ZoomAnyJs from "https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.js"
     import hljs from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/es/highlight.min.js';

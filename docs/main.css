@@ -57,6 +57,11 @@ header.shadow {
 
 main {
     padding-top: 72px;
+    padding-bottom: 36px;
+}
+
+footer {
+    padding-bottom: 72px;
 }
 
 .container-fluid {
@@ -205,4 +210,16 @@ h3 {
 hr {
     border: none;
     border-top: 2px solid #a3a3a3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f4f4f4;
 }
