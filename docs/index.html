@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+    <title>ZoomAny.js</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.css
+" type="text/css">
+</head>
+<body>
+<header>
+    <div class="container-fluid navbar">
+        <div>
+            <a href="/" id="logoLink">
+                <img id="logo" draggable="false" alt="ZoomAny.js" src="./assets/logo.svg" width="50">
+            </a>
+            <a href="/" class="title">
+                ZoomAny.js
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/#get-started">Get Started</a>
+                </li>
+                <li>
+                    <a href="/#docs">Docs</a>
+                </li>
+                <li>
+                    <a href="/#docs">Examples</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="container-fluid">
+    <section class="intro">
+        <div class="wrapper">
+            <img class="zoomable" draggable="false" id="introExample" data-min-zoom="100" data-bounds data-origin-parent
+                 src="./assets/img1.png" alt="Intro Example" width="700">
+            <div class="wrapperMenu">
+                <button id="introPlus">+</button>
+                <button id="introMinus">-</button>
+            </div>
+        </div>
+        <!--        <p>Try zooming using mousewheel!</p>-->
+        <h1><b>ZoomAny.js</b> is a JavaScript library for zooming any HTML Element, including Images, UI Elements and
+            Videos.</h1>
+        <div id="introButtons">
+            <a class="btn btn-primary" href="/#get-started"><span class="text">Get Started</span></a>
+            <a class="btn btn-secondary" href="/#examples"><span class="text">Examples</span></a>
+            <a class="btn btn-secondary" href="/#docs"><span class="text">Docs</span></a>
+        </div>
+    </section>
+    <section>
+        <h2>Get Started</h2>
+        <hr>
+        <h3>Install</h3>
+        <p>Install via NPM:</p>
+        <pre><code>npm install zoom-any-js</code></pre>
+        <p>Or via CDN:</p>
+        <pre><code>CSS: https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.css
+JS: https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.js</code></pre>
+        <h3>Basic Usage</h3>
+        <p>To get started, add the class "zoomable" to the element you want to enable zoom on:</p>
+        <pre><code>&lt;img class=&quot;zoomable&quot; src=&quot;public/img.png&quot;&gt;</code></pre>
+        <p>NPM + Bundler:</p>
+        <pre><code>import ZoomAnyJs from &quot;zoom-any-js&quot;;
+import &quot;zoom-any-js/dist/zoom-any-js.css&quot;;
+
+const zoom = new ZoomAnyJs()</code></pre>
+        <p>CDN:</p>
+        <pre><code>&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.css&quot;&gt;</code></pre>
+        <pre><code>&lt;script type=&quot;module&quot;&gt;
+    import ZoomAnyJs from &quot;https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.js&quot;
+
+    const zoom = new ZoomAnyJs()
+&lt;/script&gt;</code></pre>
+        <p>Now try to zoom into your image, it should start to zoom!</p>
+    </section>
+    <section>
+        <h2>Docs</h2>
+        <hr>
+    </section>
+    <section>
+        <h2>Examples</h2>
+        <hr>
+        <h3>Fullscreen</h3>
+        <div>
+            <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="mdZbaKb"
+               data-pen-title="ZoomAny.js Fullscreen" data-user="BenHerbst"
+               style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/BenHerbst/pen/mdZbaKb">
+  ZoomAny.js Fullscreen</a> by Ben Herbst (<a href="https://codepen.io/BenHerbst">@BenHerbst</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </div>
+        <h3>Standalone</h3>
+        <div>
+            <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="MWMgZBE"
+               data-pen-title="ZoomAny.js Fullscreen" data-user="BenHerbst"
+               style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/BenHerbst/pen/MWMgZBE">
+  ZoomAny.js Fullscreen</a> by Ben Herbst (<a href="https://codepen.io/BenHerbst">@BenHerbst</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </div>
+        <h3>Wrapper</h3>
+        <div>
+            <p class="codepen" data-height="500" data-default-tab="html,result" data-slug-hash="poXzqxr"
+               data-pen-title="ZoomAny.js Standalone" data-user="BenHerbst"
+               style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/BenHerbst/pen/poXzqxr">
+  ZoomAny.js Standalone</a> by Ben Herbst (<a href="https://codepen.io/BenHerbst">@BenHerbst</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </div>
+    </section>
+</main>
+<script type="module">
+    import ZoomAnyJs from "https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.js"
+    import hljs from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/es/highlight.min.js';
+    import javascript from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/es/languages/javascript.min.js';
+
+    hljs.registerLanguage('javascript', javascript)
+    hljs.highlightAll()
+
+    const header = document.getElementsByTagName("header")[0]
+
+    window.addEventListener("scroll", (event) => {
+        const offset = window.pageYOffset;
+
+        if (offset > 0) {
+            header.classList.add("shadow")
+        } else {
+            header.classList.remove("shadow")
+        }
+    })
+
+    const zoom = new ZoomAnyJs()
+
+    document.getElementById("introExample").addEventListener("click", (event) => {
+        zoom.zoomAt(1.1, {x: event.pageX, y: event.pageY})
+        zoom.apply()
+    })
+
+    document.getElementById("introPlus").addEventListener("click", () => {
+        zoom.zoomAt(1.1, {x: window.innerWidth / 2, y: window.innerHeight / 2})
+        zoom.apply()
+        zoom.fitToBounds()
+        zoom.apply()
+    })
+
+    document.getElementById("introMinus").addEventListener("click", () => {
+        zoom.zoomAt(1 / 1.1, {x: window.innerWidth / 2, y: window.innerHeight / 2})
+        zoom.apply()
+        zoom.fitToBounds()
+        zoom.apply()
+    })
+</script>
+</body>
+</html>
