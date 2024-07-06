@@ -21,6 +21,12 @@ Install via NPM:
 npm i zoom-any-js
 ```
 
+Or via CDN:
+```
+CSS: https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.css
+JS: https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.js
+```
+
 ## Basic Usage
 
 To get started, add the class "zoomable" to the element you want to enable zoom on:
@@ -28,12 +34,26 @@ To get started, add the class "zoomable" to the element you want to enable zoom 
 <img class="zoomable" src="public/img.png">
 ```
 
+### NPM + Bundler:
 Then create a new instance in JavaScript, and import the CSS:
 ``` javascript
 import ZoomAnyJs from "zoom-any-js";
 import "zoom-any-js/dist/zoom-any-js.css";
 
 const zoom = new ZoomAnyJs()
+```
+
+### CDN:
+``` html
+<link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.css">
+```
+
+``` html
+<script type="module">
+    import ZoomAnyJs from "https://cdn.jsdelivr.net/npm/zoom-any-js@latest/dist/zoom-any-js.js"
+
+    const zoom = new ZoomAnyJs()
+</script>
 ```
 
 Now try to zoom into your image, it should start to zoom! 🎉
