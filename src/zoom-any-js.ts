@@ -257,6 +257,8 @@ export default class ZoomAnyJs {
      * @private
      */
     #onWheel(event: WheelEvent) {
+        event.preventDefault()
+
         let amplitude = 0
 
         if (event.deltaY < 1) {
