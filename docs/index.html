@@ -289,10 +289,16 @@ const zoom = new ZoomAnyJs()</code></pre>
     const burger = document.getElementById("hamburger")
     const burgerMenu = document.getElementById("hamburgerMenu")
 
+    function hideBurgerMenu() {
+        burger.removeAttribute("data-open")
+        burgerMenu.classList.remove("visible")
+    }
+
+    burgerMenu.addEventListener("click", hideBurgerMenu)
+
     burger.addEventListener("click", () => {
         if (burger.hasAttribute("data-open")) {
-            burger.removeAttribute("data-open")
-            burgerMenu.classList.remove("visible")
+            hideBurgerMenu()
         } else {
             burger.setAttribute("data-open", "")
             burgerMenu.classList.add("visible")
