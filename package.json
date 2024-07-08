@@ -3,7 +3,7 @@
   "description": "ZoomAny.js: Zoom ANY HTML Element using vanilla JavaScript. Also optionally supports TypeScript",
   "private": false,
   "author": "Ben Herbst",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "type": "module",
   "main": "dist/zoom-any-js.umd.cjs",
   "module": "dist/zoom-any-js.js",

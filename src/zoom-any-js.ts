@@ -25,9 +25,10 @@ export default class ZoomAnyJs {
      */
     constructor(elementSelector: string = '.zoomable') {
         this.#selectElement(elementSelector)
+        this.#onWheelListener = this.#onWheel.bind(this)
+        this.addListeners()
+
         window.onload = (() => {
-            this.#onWheelListener = this.#onWheel.bind(this)
-            this.addListeners()
             this.fitToBounds()
             this.apply()
         })
