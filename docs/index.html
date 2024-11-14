@@ -164,7 +164,7 @@ const zoom = new ZoomAnyJs()</code></pre>
                 <tr>
                     <td>center</td>
                     <td>Centers the element within its container, which can be the window or the element's parent.</td>
-                    <td>None</td>
+                    <td>string ('x' | 'y' | 'xy')</td>
                     <td>void</td>
                 </tr>
                 <tr>
@@ -179,6 +179,12 @@ const zoom = new ZoomAnyJs()</code></pre>
                     <td>zoomAt</td>
                     <td>Zooms the element based on the given amplitude and position.</td>
                     <td>number, object {x: number, y: number}</td>
+                    <td>void</td>
+                </tr>
+                <tr>
+                    <td>zoomToFit</td>
+                    <td>Set the zoom level such that the contents exactly fits within the parent/wrapper.</td>
+                    <td>None</td>
                     <td>void</td>
                 </tr>
                 <tr>
@@ -204,6 +210,15 @@ const zoom = new ZoomAnyJs()</code></pre>
                     <td>Removes all listeners and CSS changes, reverting the element to its initial state.</td>
                     <td>None</td>
                     <td>void</td>
+                </tr>
+                <tr>
+                    <td>isInteracting</td>
+                    <td>
+                        Return whether the person is currently interacting (zooming / dragging) with the content. This
+                        can be used for example to prevent a click action when the user is dragging the content.
+                    </td>
+                    <td>None</td>
+                    <td>boolean</td>
                 </tr>
                 </tbody>
             </table>
@@ -237,6 +252,11 @@ const zoom = new ZoomAnyJs()</code></pre>
                 <tr>
                     <td>data-origin-parent</td>
                     <td>Use the offsetParent as origin for fitting bounding. Else it uses window</td>
+                    <td>false</td>
+                </tr>
+                <tr>
+                    <td>data-draggable</td>
+                    <td>Enable dragging of the content within the wrapper/container</td>
                     <td>false</td>
                 </tr>
                 </tbody>

@@ -1,6 +1,9 @@
 .zoomAnyJs-zoomElement {
     position: relative;
     transform-origin: top left;
+    touch-action: none;
+    width: fit-content;
+    height: fit-content;
 }
 
 .wrapper {

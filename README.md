@@ -113,10 +113,11 @@ const zoom3 = new ZoomAnyJs("#zoom3")
 
 Basic options can be set by using data-* attributes on the element you zoom:
 
-- data-max-zoom: Set maximimum zoom. Default: 4000
-- data-min-zoom: Set minimum zoom. Default: 10
+- data-max-zoom: Set maximimum zoom. Integer or "fit". Default: 4000
+- data-min-zoom: Set minimum zoom. Integer or "fit". Default: 10
 - data-bounds: Enable fit to bounding. Default: false
 - data-origin-parent: Use the _offsetParent_ as origin for fitting bounding. Else it uses window. Default: false
+- data-draggable: Enable dragging of the content within the wrapper/container. Default: false
 
 _The default zoom level is 100, which is the original size and represents a scale of 1.0_
 
@@ -130,6 +131,7 @@ All available functions:
 - center(): Moves the image to the center of the window or the offsetParent when using data-origin-parent
 - fitToBounds(): Fits into the bounds when using data-bounds, else it just returns void
 - zoomAt(amplitude: number, pos: {x: number, y: number}): Move to the position by the amplitude. Amplitude > 1 zooms in and amplitude < 1 zooms out
+- zoomToFit(): set the zoom level such that the contents exactly fits within the parent/wrapper
 - addListeners(): Adds the event listeners
 - removeListeners(): Removes the event listeners
 - apply(): Has to be callen to update the view. Without calling it, you cant see any change
@@ -139,3 +141,4 @@ All available functions:
 - setZoom(value: number): Sets the zoom
 - getPos(): Returns the position
 - setPos(value: {x: number, y: number}): Sets the position
+- isInteracting(): Return whether the person is currently interacting (zooming / dragging) with the content
