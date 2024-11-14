@@ -164,7 +164,7 @@ const zoom = new ZoomAnyJs()</code></pre>
                 <tr>
                     <td>center</td>
                     <td>Centers the element within its container, which can be the window or the element's parent.</td>
-                    <td>None</td>
+                    <td>string ('x' | 'y' | 'xy')</td>
                     <td>void</td>
                 </tr>
                 <tr>
@@ -210,6 +210,15 @@ const zoom = new ZoomAnyJs()</code></pre>
                     <td>Removes all listeners and CSS changes, reverting the element to its initial state.</td>
                     <td>None</td>
                     <td>void</td>
+                </tr>
+                <tr>
+                    <td>isInteracting</td>
+                    <td>
+                        Return whether the person is currently interacting (zooming / dragging) with the content. This
+                        can be used for example to prevent a click action when the user is dragging the content.
+                    </td>
+                    <td>None</td>
+                    <td>boolean</td>
                 </tr>
                 </tbody>
             </table>

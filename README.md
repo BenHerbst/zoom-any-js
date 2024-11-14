@@ -141,3 +141,4 @@ All available functions:
 - setZoom(value: number): Sets the zoom
 - getPos(): Returns the position
 - setPos(value: {x: number, y: number}): Sets the position
+- isInteracting(): Return whether the person is currently interacting (zooming / dragging) with the content
